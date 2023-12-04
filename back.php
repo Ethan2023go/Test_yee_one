@@ -85,7 +85,7 @@
 
 			<?php
 			$do = $_GET['do'] ?? 'title';
-			$file = "./back/$do.php";
+			$file = "./back/{$do}.php";
 			if (file_exists($file)) {
 				include $file;
 			} else {

@@ -45,7 +45,7 @@
 			<?php
 			//   老師解法，用file_exists這個PHP的特殊用法判斷是否為file
 			$do = $_GET['do'] ?? 'main';
-			$file = "./front/$do.php";
+			$file = "./front/{$do}.php";
 			if (file_exists($file)) {
 				include $file;
 			} else {
