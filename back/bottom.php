@@ -1,14 +1,14 @@
 <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-    <p class="t cent botli">進站總人數</p>
+    <p class="t cent botli">頁尾版權資料管理</p>
     <form method="post"  action="./api/edit_info.php">
         <!-- action執行後進入指定back這個檔案並使用iframe顯示這個頁面  -->
         <table style="width:50%;margin:auto">
             <tbody>
                 <tr class="yel">
-                    <td width="50%">網站標題</td>
-                    <td width="50%">
-                    <input type="number" name="total" value="<?=$Total->find(1)['total'];?>">
-                    <input type="hidden" name="table" value="total">                
+                <td width="50%">網站標題</td>
+                <td width="50%">
+                <input type="number" name="bottom" value="<?=$Bottom->find(1)['bottom'];?>">
+                <input type="hidden" name="table" value="bottom">                
                 </tr>
             </tbody>
         </table>
