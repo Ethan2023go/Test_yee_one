@@ -19,7 +19,7 @@
                         <img src="./img/<?=$row['img'];?>" style="width:300px;height:30px">
                     </td>
                     <td width="23%">
-                        <input type="text" name="text[<?=$row['id'];?>]"style="width:90%" value="<?=$row['id'];?>">
+                        <input type="text" name="text[<?=$row['id'];?>]"style="width:90%" value="<?=$row['text'];?>">
                     </td>
                     <td width="7%">
                         <input type="radio" name="sh" value="<?=$row['id'];?>">
