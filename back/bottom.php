@@ -7,8 +7,8 @@
                 <tr class="yel">
                 <td width="50%">網站標題</td>
                 <td width="50%">
-                <input type="number" name="bottom" value="<?=$Bottom->find(1)['bottom'];?>">
-                <input type="hidden" name="table" value="bottom">                
+                <input type="text" name="bottom" value="<?=$Bottom->find(1)['bottom'];?>">
+                <input type="hidden" name="table" value="<?=$do;?>">                
                 </tr>
             </tbody>
         </table>
