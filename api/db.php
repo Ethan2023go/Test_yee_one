@@ -10,7 +10,7 @@ class DB{
     public function __construct($table)
     {
         $this->table=$table;
-        $this->pdo=new PDO($this->dsn,'db91','db91'); 
+        $this->pdo=new PDO($this->dsn,'root',''); 
     }
  
 
@@ -146,6 +146,7 @@ function to ($url){
 }
 
 $Title =new DB('titles');
+$Total =new DB('total');
 
 
 ?>
