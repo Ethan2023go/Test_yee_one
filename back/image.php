@@ -10,12 +10,34 @@
                     <td width="7%">刪除</td>
                     <td></td>
                 </tr>
+                <?php
+                $rows=$Title->all();
+                foreach($rows as $row){
+                ?>
+                <tr>
+                    <td width="45%">
+                        <img src="./img/<?=$row['img'];?>" style="width:300px;height:30px">
+                    </td>
+                    <td width="23%">
+                        <input type="text" name="text[<?=$row['id'];?>]"style="width:90%" value="<?=$row['id'];?>">
+                    </td>
+                    <td width="7%">
+                        <input type="radio" name="sh" value="<?=$row['id'];?>">
+                    </td>
+                    <td width="7%">
+                    <input type="button" onclick="op('#cover','#cvr','./modal/upload.php?table=<?=$do;?>&id=<?=$row['id'];?>')" value="更新圖片">
+                    </td>
+                </tr>
+                <?php
+                }
+                ?>
             </tbody>
         </table>
         <table style="margin-top:40px; width:70%;">
             <tbody>
                 <tr>
-                    <td width="200px"><input type="button" onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;view.php?do=title&#39;)" value="新增網站標題圖片"></td>
+                    <input type="hidden" name="table" value="<?=$do;?>">
+                    <td width="200px"><input type="button" onclick="op('#cover','#cvr','view.php?do=title')" value="新增網站標題圖片"></td>
                     <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
                 </tr>
             </tbody>

@@ -1,6 +1,6 @@
 <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-    <p class="t cent botli">網站標題管理</p>
-    <form method="post" target="back" action="?do=tii">
+    <p class="t cent botli">校園映像資料管理</p>
+    <form method="post" action="./api/edit.php">
         <table width="100%">
             <tbody>
                 <tr class="yel">
@@ -10,6 +10,30 @@
                     <td width="7%">刪除</td>
                     <td></td>
                 </tr>
+                <?php
+                $rows=$Title->all();
+                foreach($rows as $row){
+                ?>
+                <tr>
+                    <td width="45%">
+                        <img src="./img/<?=$row['img'];?>" style="width:300px;height:30px">
+                    </td>
+                    <td width="23%">
+                        <input type="text" name="text[<?=$row['id'];?>]"style="width:90%" value="<?=$row['id'];?>">
+                    </td>
+                    <td width="7%">
+                        <input type="radio" name="sh" value="<?=$row['id'];?>">
+                    </td>
+                    <td width="7%">
+                    <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
+                    </td>
+                    <td width="7%">
+                    <input type="button" onclick="op('#cover','#cvr','./modal/upload.php?table=<?=$do;?>&id=<?=$row['id'];?>')" value="更新圖片">
+                    </td>
+                </tr>
+                <?php
+                }
+                ?>
             </tbody>
         </table>
         <table style="margin-top:40px; width:70%;">

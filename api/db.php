@@ -145,9 +145,8 @@ function to ($url){
     header("location:$url");
 }
 
-$Title =new DB('titles');
+$Title =new DB('title');
 $Total =new DB('total');
 $Bottom =new DB('bottom');
-
 
 ?>
