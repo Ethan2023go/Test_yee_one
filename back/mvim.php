@@ -10,20 +10,21 @@
                     <td></td>
                 </tr>
                 <?php
-                $rows=$Title->all();
+                $rows=$Mvim->all();
                 foreach($rows as $row){
                 ?>
                 <tr>
-                    <td width="70%">
-                        <img src="./img/<?=$row['img'];?>" style="width:80%;height:30px">
+                    <td>
+                        <img src="./img/<?=$row['img'];?>" style="width:150px;height:100px">
                     </td>
-                    <td width="10%">
-                        <input type="radio" name="sh" value="<?=$row['id'];?>">
+                    <input type="hidden" name="id[]" value="<?=$row['id'];?>">                                    
+                    <td>
+                    <input type="checkbox" name="sh[]" value="<?=$row['id'];?>"<?=($row['sh']==1)?'checked':'';?>>
                     </td>
-                    <td width="10%">
-                    <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
+                    <td>
+                        <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
                     </td>
-                    <td width="10%">
+                    <td>
                     <input type="button" onclick="op('#cover','#cvr','./modal/upload.php?table=<?=$do;?>&id=<?=$row['id'];?>')" value="更換動畫">
                     </td>
                 </tr>
