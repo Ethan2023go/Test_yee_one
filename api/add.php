@@ -14,6 +14,4 @@ $DB->save($_POST);
 
 to("../back.php?do=$table");
 
-
-
 ?>

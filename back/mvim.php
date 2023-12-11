@@ -10,9 +10,9 @@
                     <td></td>
                 </tr>
                 <?php
-                $rows=$Mvim->all();
-                foreach($rows as $row){
-                ?>
+                 $rows=$DB->all();
+                 foreach($rows as $row){
+                 ?>
                 <tr>
                     <td>
                         <img src="./img/<?=$row['img'];?>" style="width:150px;height:100px">
