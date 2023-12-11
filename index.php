@@ -24,7 +24,7 @@
 			$title=$Title->find(['sh'=>1]);
 		?>
 		<a title="<?=$title['text'];?>" href="index.php">
-			<div class="ti" style="background:url(&#39;use/&#39;); background-size:cover;"></div><!--標題-->
+			<div class="ti" style="background:url('./img/<?=$title['img'];?>'); background-size:cover;"></div><!--標題-->
 		</a>
 		<div id="ms">
 			<div id="lf" style="float:left;">

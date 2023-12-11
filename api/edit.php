@@ -16,3 +16,4 @@ foreach($_POST['text'] as $id => $text){
 }
 
 to("../back.php?do=$table");
+
