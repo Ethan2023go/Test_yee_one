@@ -148,5 +148,7 @@ function to ($url){
 $Title =new DB('title');
 $Total =new DB('total');
 $Bottom =new DB('bottom');
+$Mvim =new DB('mvim');
+$Ad =new DB('ad');
 
 ?>
