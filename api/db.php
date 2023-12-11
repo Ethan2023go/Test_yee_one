@@ -152,6 +152,7 @@ $Mvim =new DB('mvim');
 $Ad =new DB('ad');
 $Image =new DB('image');
 $News= new DB ('news');
+$Admin= new DB ('admin');
 
 if(isset($_GET['do'])){
     $DB=${ucfirst($_GET['do'])};
