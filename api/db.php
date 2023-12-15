@@ -155,7 +155,19 @@ $News= new DB ('news');
 $Admin= new DB ('admin');
 $Menu= new DB ('menu');
 
+
+//$tables=array_keys(get_defined_vars());
+/* dd($tables); */
 if(isset($_GET['do'])){
-    $DB=${ucfirst($_GET['do'])};
+    //$key=ucfirst($_GET['do']);
+    
+    if(isset(${ucfirst($_GET['do'])})){
+        $DB=${ucfirst($_GET['do'])};
+    }
+    /* if(in_array($key,$tables)){
+        $DB=$$key;
+    } */
+}else{
+    $DB=$Title;
 }
 ?>
