@@ -171,4 +171,10 @@ if(isset($_GET['do'])){
     $DB=$Title;
 }
 
+if(!isset($_SESSION['visited'])){
+    $Total->q("update `total` set `total`=`total`+1 where `id`=1");
+    $_SESSION['visited']=1;
+
+}
+
 ?>
